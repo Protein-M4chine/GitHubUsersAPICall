@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap");
+
+body {
+    font-family: Poppins;
+    background-color: #F1EEEE;
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    
+    header{
+        text-align:center;
+        background-image: linear-gradient(#F1EEEE, #d4d1d1);
+        
+    
+        a{
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 300;
+            color: black;
+            text-shadow: 1px 1px 2px rgb(138, 137, 137);
+            text-decoration: none;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .hero{
+        position: relative;
+
+        .welcome-container{
+            
+            position: fixed;
+            display: flex;
+            width: 50%;
+            margin: 100px 25%;
+            display: flex;
+            text-align: center;
+            .left-col{
+                width: 50%;
+                margin: 2em;
+                overflow-wrap: break-word;
+                font-size: 75%;
+                h4 {
+                    font-weight: 300;
+                }
+            }
+            
+            .right-col{
+                width: 50%;
+                margin: 1em;
+                position: relative;
+                
+                a{
+                    position: relative;
+                    top: 30%;
+                //     border: 1px solid #707070;
+                //     border-radius: .5em;
+                //     background-color: #e99332;
+                //     color: white;
+                //     padding: .5em;
+            // text-shadow: 1px 1px 2px rgb(138, 137, 137);
+                    
+                }
+            }
+        }
+
+        .loadingContainer
+        {
+            // position: relative; 
+            display: grid;
+            justify-content: center;
+            grid-template-columns:30px;
+            width: 50%;
+            margin: 200px 25%;
+
+            .loadingSymbol {
+                position: absolute;
+                left: 47%;
+                border: 16px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 16px solid #3498db;
+                width: 60px;
+                height: 60px;
+                -webkit-animation: spin 1s linear infinite; /* Safari */
+                animation: spin 1s linear infinite;
+              }
+              
+            p{
+                position: absolute;
+                left: 47%;
+                padding-top: 90px;
+            }
+              /* Safari */
+            @-webkit-keyframes spin {
+                0% { -webkit-transform: rotate(0deg); }
+                100% { -webkit-transform: rotate(360deg); }
+            }
+              
+            @keyframes spin {
+                0% { transform: rotate(0deg); }
+                100% { transform: rotate(360deg); }
+            }
+        }
+
+
+        .users-container
+        {
+            width: 50%;
+            margin: 25px 25% 0 25%;
+            padding-bottom: 75px;
+            
+            .button-group{
+                margin: 0;
+            }
+        }
+    }
+
+    footer{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        text-align: center;
+        background-color: #FFFFFF;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+
+        a{
+            padding-right: .5em;
+            padding-left: .5em;
+            color: black;
+            font-size: .75em;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .welcome-container{
+        flex-direction: column;
+        align-items: center;
+
+        .right-col{
+            
+            a{
+                font-size: .6em;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 520px){
+
+    .hero{
+
+        .welcome-container{
+            
+            .left-col{
+                h4{
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+
+    #sort-by-username-button{
+        margin-bottom: 10px;
+    }
+}
+
